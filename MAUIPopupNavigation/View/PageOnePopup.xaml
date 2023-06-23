@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CTK:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:CTK="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+           xmlns:viewmodel="clr-namespace:MAUIPopupNavigation.ViewModel"
+           x:DataType="viewmodel:PageOneViewModel"
+           x:Class="MAUIPopupNavigation.View.PageOnePopup"
+           Color="DarkGrey">
+
+    <Grid RowDefinitions="*, *"
+          ColumnDefinitions="*"
+          RowSpacing="50">
+        <Label Grid.Row="0" Grid.Column="0"
+               Text="{Binding Title}"
+               FontSize="Large"
+               TextColor="White"
+               VerticalOptions="End"
+               HorizontalOptions="Center"/>
+        <Button Grid.Row="1" Grid.Column="0"
+                Text="Back"
+                TextColor="Black"
+                BackgroundColor="White"
+                FontSize="Large"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                Command="{Binding BackButtonCommand}"/>
+    </Grid>
+</CTK:Popup>

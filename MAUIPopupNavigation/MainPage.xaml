@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MAUIPopupNavigation.ViewModel"
+             x:DataType="viewmodel:MainPageViewModel"
+             x:Class="MAUIPopupNavigation.MainPage"
+             Title="{Binding Title}">
+
+    <ScrollView>
+        <Grid RowDefinitions="*, *"
+              ColumnDefinitions="*">
+            <Label Grid.Row="0" Grid.Column="0"
+                   Text="Main Page"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <Grid Grid.Row="1" Grid.Column="0"
+                  RowDefinitions="Auto"
+                  ColumnDefinitions="Auto, Auto, Auto"
+                  HorizontalOptions="Center"
+                  ColumnSpacing="15">
+                <Button Grid.Row="0" Grid.Column="0"
+                        Text="Page 1 Shell"
+                        FontSize="Medium"
+                        Command="{Binding ShellPageOneCommand}"/>
+                <Button Grid.Row="0" Grid.Column="1"
+                        Text="Page 1 Popup"
+                        FontSize="Medium"
+                        Command="{Binding PopupPageOneCommand}"/>
+                <Button Grid.Row="0" Grid.Column="2"
+                        Text="Page 1 Modal"
+                        FontSize="Medium"
+                        Command="{Binding ModalPageOneCommand}"/>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
+
